@@ -1,0 +1,7 @@
+setwd("C:\\INFM600/")
+d = read.csv("Sample1.csv")
+nrow(d)
+head(d)
+plot(d$wing,type="p")
+plot(d$height)
+plot(d$color)
