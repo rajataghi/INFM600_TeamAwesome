@@ -1,16 +1,5 @@
 # INFM600Project - Understanding Online News Popularity
 Team Project for INFM600<br>
-<h4><b>Synopsis</b></h4>
-_______
-Our aim with this project is to look at data about the popularity of news articles published on [Mashable](http://mashable.com/) over a period of 2 years. We try to identify the factors which significantly affect the number of shares an articles receives using basic statistical analysis. The data is publicly available and can be accessed [here](https://archive.ics.uci.edu/ml/datasets/Online%20News%20Popularity). Our analysis can be broadly divided into three research questions.
-
-<h4><b>Research Questions</b></h4>
-
-_____
-1. What is the best day to release an article? Does the best day vary with the type of news?
-2. How does the number of images and number of words in an article affect the number of shares?
-3. Does the rate of sharing positive and negative news vary with the time of the year?
-
 <h4><b>Directory Structure</b></h4>
 _____
 Our repository has 3 main folders:
@@ -31,3 +20,14 @@ Our repository has 3 main folders:
   * Project Presentation
   * A document summarizing contributions of each of the team members to the project
   * A persona for our target audience
+
+<h4><b>Synopsis</b></h4>
+_______
+Our aim with this project is to look at data about the popularity of news articles published on [Mashable](http://mashable.com/) over a period of 2 years. We try to identify the factors which significantly affect the number of shares an articles receives using basic statistical analysis. The data is publicly available and can be accessed [here](https://archive.ics.uci.edu/ml/datasets/Online%20News%20Popularity). Our analysis can be broadly divided into three research questions.
+
+<h4><b>Research Questions</b></h4>
+
+_____
+1. What is the best day to release an article? Does the best day vary with the type of news?
+2. How does the number of images and number of words in an article affect the number of shares?
+3. Does the rate of sharing positive and negative news vary with the time of the year?
