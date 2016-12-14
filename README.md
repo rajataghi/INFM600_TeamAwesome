@@ -23,6 +23,7 @@ Our Directory has 3 main folders:
   * Contains subfolders for each of the team assignments (data cleaning, R Script etc.) that we have submitted over the course of the project. 
   * Folder names are same/similar to the assignment name for ease of understanding.
   * Individual file names are in accordance with the naming convention decided in class.
+  
 * Final Submission - In accordance with the assignment titled "Git Repository", this folder contains the following:
   * Data cleaning documentation and scripts
   * R Script and R plots used for the analysis
