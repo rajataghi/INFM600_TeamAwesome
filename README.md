@@ -30,3 +30,4 @@ Our repository has 3 main folders:
   * A 500 word summary of the project
   * Project Presentation
   * A document summarizing contributions of each of the team members to the project
+  * A persona for our target audience
