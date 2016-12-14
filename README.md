@@ -13,7 +13,7 @@ _____
 
 <h4><b>Directory Structure</b></h4>
 _____
-Our Directory has 3 main folders:
+Our repository has 3 main folders:
 
 * Drafts
   * Contains the original data set
