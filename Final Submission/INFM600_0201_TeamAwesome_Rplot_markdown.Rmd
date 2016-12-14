@@ -1,9 +1,9 @@
 ---
 title: "Online News Popularity(Mashable)"
 output:
-  pdf_document: default
-  html_notebook: default
   html_document: default
+  html_notebook: default
+  pdf_document: default
 ---
 
 The Online News Popularity dataset was published by Mashable, which is a online platform for media and entertainment news. The data set contains details about the various news articles published on the website such as their category, url, date published and the number of times it was shared. 
@@ -90,24 +90,6 @@ barplot(m_bus_wd_we,
 <b>Description:</b>This plot shows how does the sharing of articles under the topic "Business" vary with the time of the week. This is an interesting result as we usually expect articles about business to be shared more on the weekdays than on the weekends. However, the plot clearly shows that the business articles fare better on a weekend with a difference of about 1000 in the average number of shares.
 
 <br><br>
-```{r}
-## On weekend, average no. of shares: business articles vs. non-business articles
-Q1.2.2_Data <- subset(OnlineNewsPopularity, is_weekend == 1, select = c(data_channel_is_bus, shares))
-# get average no. of shares of business and non-business articles
-m_wd_b <- mean(subset(Q1.2.2_Data, data_channel_is_bus == 1, select = shares)$shares)
-m_wd_nb <- mean(subset(Q1.2.2_Data, data_channel_is_bus == 0, select = shares)$shares)
-m_wd_b_nb <- c(m_wd_b, m_wd_nb)
-# bar plot
-barplot(m_wd_b_nb,
-        main = "Avg. Shares on Weekend:Business vs. Non-Business Articles",
-        ylab = "Average No. of Shares",
-        xlab = "Type of Article",
-        ylim = c(0,4000),
-        col = colors()[237],
-        names.arg = c("Business", "Non-Business"))
-```
-<b>Description:</b>This plot shows how the average number of shares vary with the type of the article. Similar to the conclusion from the plot above, we can see that there is no significant difference in the average number of shares between business and non-business articles. This result is contrary to our assumption that people are less likely to share business related artices on weekends.
-<br><br>
 <h4><b>Q2. How does text and image quantity in articles relate to the number of shares?</b></h4><br><br>
 
 ```{r}
@@ -126,7 +108,6 @@ hist(num_images, main = "Total Number of Images in an article", xlab = "Frequenc
 
 ```{r}
 hist(shares, main = "Total Number of Shares for an Article", xlab = "Frequency Distribution of Number of Shares")
-
 ```
 <b>Description:Frequency Distribution of the total number of shares in an article. This shows that histogram is right skewed</b>
 
@@ -140,11 +121,11 @@ Q2_data$numshare<- shares/10000
 #Distribution of number of images and number or words, respectively, in an article with respect to number of shares (x10000) of that article
 #The parameter alpha is used to show the density of the articles at that point
 #The line is made to view the trend of the data since we have a lot of data points.
-qplot(num_images, numshare,data = Q2_data, xlab = "Number of Images in an Article", ylab = "Number of Shares(x10000)", main = "#images in an article with respect to number of shares", xlim = c(0, 100), ylim = c(0,20), alpha = I(1/10), geom = c("point", "smooth"),width = 100)
-qplot(number_of_words, numshare, data = Q2_data, xlab = "Number of Words in an Article", ylab = "Number of Shares (x10000)", main = "#words in an article with respect to number of shares", xlim = c(0, 7000), ylim = c(0,15), alpha = I(1/10), geom = c("point", "smooth"))
+qplot(num_images, numshare, data = Q2_data, xlab = "Number of Images in an Article", ylab = "Number of Shares (x10000)", main = "Distribution of number of images in an article with respect to number of shares of that article",ylim = c(0,7.5), xlim = c(0,60), alpha = I(1/10), geom = c("point","smooth"))
+qplot(number_of_words, numshare, data = Q2_data, xlab = "Number of Words in an Article", ylab = "Number of Shares (x10000)", main = "Number of Shares vs. Number of Words", xlim = c(0,6000), ylim = c(0,20), alpha = I(1/20), geom = c("point", "smooth"))
 
 ```
-<b>Description:</b>This graph  the trend of the number of images in an article along with the number of shares of that article. We can interpret from the trend line that there is a slight relation between number of images and the number of shares. The articles with images in the range of 10-30 have a higher number of shares. The second graph shows the trend of the number of words in an article along with the number of shares of that article.We can interpret from the trend line that there is no specific relationship between the number of shares and the number of words.
+<b>Description:</b>This graph shows the trend of the number of images in an article along with the number of shares of that article. We can interpret from the trend line that there is a slight relation between number of images and the number of shares. The articles with images in the range of 7-25 have a higher number of shares. The second graph shows the trend of the number of words in an article along with the number of shares of that article.We can interpret from the trend line that there is no specific relationship between the number of shares and the number of words.
 
 ```{r}
 #This bar graph shows the number of articles with an image and the number of articles without an image respectively
@@ -156,16 +137,6 @@ ggplot(data = Q2_data, aes(x = image_there)) +
 
 ```
 <b>Description:</b>This bar graph shows the number of articles with an image and the number of articles without an image respectively
-
-```{r}
-#This plot shows the average number of shares for articles with an image and without an image respectively
-res <- aggregate(shares ~ image_there, data = Q2_data, FUN = mean)
-ggplot(res, aes(x = image_there, y = shares)) + 
-  geom_bar(aes(fill = image_there), stat = "identity") +
-  xlab(NULL) + ylab("Average Number of Shares")
-
-```
-<b>Description:</b>This plot shows the average number of shares for articles with an image and without an image respectively. We can interpret from this graph that the average number of shares of an article with NO IMAGE is higher (4395.779) and with an IMAGE is lower (3181.344)
 
 ```{r}
 #This plot shows the total number of shares of articles with an image and without and image respectively

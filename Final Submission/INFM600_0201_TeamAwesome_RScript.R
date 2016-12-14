@@ -61,7 +61,6 @@ cor.test(data_channel_is_bus, shares)
 cor.test(data_channel_is_socmed, shares) 
 cor.test(data_channel_is_tech, shares)
 cor.test(data_channel_is_world, shares)
-
 # End of Question 1
 ###################
 
@@ -70,7 +69,7 @@ cor.test(data_channel_is_world, shares)
 
 ###################
 # Research Question 2
-###Q2- How does text and image quantity in articles relate to the number of shares?###
+### Q2- How does text and image quantity in articles relate to the number of shares? ###
 
 # Making a subset of the columns needed for our analysis
 # The columns required for this question are n_tokens_content (number_of_words), num_imgs (numb_images), shares
