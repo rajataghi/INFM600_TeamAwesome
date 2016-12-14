@@ -1,4 +1,4 @@
-# INFM600Project - Online News Popularity
+# INFM600Project - Understanding Online News Popularity
 Team Project for INFM600<br>
 <h4><b>Synopsis</b></h4>
 _______
@@ -8,7 +8,7 @@ Our aim with this project is to look at data about the popularity of news articl
 
 _____
 1. What is the best day to release an article? Does the best day vary with the type of news?
-2. How does the number of images in an article affect the number of shares?
+2. How does the number of images and number of words in an article affect the number of shares?
 3. Does the rate of sharing positive and negative news vary with the time of the year?
 
 <h4><b>Directory Structure</b></h4>
