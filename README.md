@@ -13,7 +13,7 @@ _____
 
 <h4><b>Directory Structure</b></h4>
 _____
-Our Directory has 2 main folders:
+Our Directory has 3 main folders:
 
 * Drafts
   * Contains the original data set
@@ -23,5 +23,9 @@ Our Directory has 2 main folders:
   * Contains subfolders for each of the team assignments (data cleaning, R Script etc.) that we have submitted over the course of the project. 
   * Folder names are same/similar to the assignment name for ease of understanding.
   * Individual file names are in accordance with the naming convention decided in class.
-  * Contains our final presentation and project summary
-  * Includes document summarizing contributorship to the project
+* Final Submission - In accordance with the assignment titled "Git Repository", this folder contains the following:
+  * Data cleaning documentation and scripts
+  * R Script and R plots used for the analysis
+  * A 500 word summary of the project
+  * Project Presentation
+  * A document summarizing contributions of each of the team members to the project
