@@ -12,6 +12,7 @@ _____
 3. Does the rate of sharing positive and negative news vary with the time of the year?
 
 <h4><b>Directory Structure</b></h4>
+_____
 Our Directory has 2 main folders:
 
 * Drafts
